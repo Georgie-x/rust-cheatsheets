@@ -1,6 +1,6 @@
 body {
-	color: rgb(97, 5, 97);
-	background-color: rgb(245, 244, 194);
+	color: rgb(68, 26, 122);
+	background-color: hsl(157, 39%, 61%,0.7);
 	max-width: 720px;
 	margin: auto;
 	font-size: 18px;
@@ -8,7 +8,7 @@ body {
 
 code {
 	border-radius: 0.5rem;
-	background-color: coral;
+	background-color: rgb(207, 72, 23,0.7);
 	display: flex;
 	padding: 10px;
 	white-space: pre;
