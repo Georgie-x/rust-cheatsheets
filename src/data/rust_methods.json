@@ -1,0 +1,359 @@
+[
+	{
+		"method": ".iter()",
+		"description": "Creates an iterator that borrows each element of the collection.",
+		"input-type": "Collection",
+		"output-type": "Iterator<Item=&T>",
+		"example": ""
+	},
+	{
+		"method": ".iter_mut()",
+		"description": "Creates an iterator that mutably borrows each element of the collection.",
+		"input-type": "Collection",
+		"output-type": "Iterator<Item=&mut T>",
+		"example": ""
+	},
+	{
+		"method": ".into_iter()",
+		"description": "Consumes the collection and creates an iterator that takes ownership of each element.",
+		"input-type": "Collection",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".map()",
+		"description": "Transforms each element using a closure.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=U>",
+		"example": "fn multiply_by_two(vec: Vec<i32>) -> Vec<i32> {\nvec.into_iter()\n.map(|x| x * 2)\n.collect()"
+	},
+	{
+		"method": ".filter()",
+		"description": "Filters elements based on a predicate.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": "fn only_odds(vec: Vec<i32>) -> Vec<i32> {\nvec.into_iter()\n.filter(|x| x % 2 = 0\n.collect()"
+	},
+	{
+		"method": ".filter_map()",
+		"description": "Filters and maps elements using a closure that returns Option.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=U>",
+		"example": ""
+	},
+	{
+		"method": ".flat_map()",
+		"description": "Flattens nested iterators into a single iterator.",
+		"input-type": "Iterator<Item=Iterator<Item=T>>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".fold()",
+		"description": "Combines elements into a single value using an accumulator.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "U",
+		"example": "fn sum_numbers() {\nlet numbers = [1, 2, 3, 4, 5];\nlet total: i32 = numbers.iter().fold(0, |acc, &x| acc + x);\nprintln!(\"The sum is: {total}\");"
+	},
+	{
+		"method": ".for_each()",
+		"description": "Applies a closure to each element for side effects.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "()",
+		"example": ""
+	},
+	{
+		"method": ".collect()",
+		"description": "Consumes the iterator and collects the elements into a collection.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Collection<T>",
+		"example": "fn multiply_by_two(vec: Vec<i32>) -> Vec<i32> {\nvec.into_iter()\n.map(|x| x * 2)\n.collect()"
+	},
+	{
+		"method": ".enumerate()",
+		"description": "Adds a counter to each element, yielding pairs of index and value.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=(usize, T)>",
+		"example": ""
+	},
+	{
+		"method": ".zip()",
+		"description": "Combines two iterators into an iterator of pairs.",
+		"input-type": "Iterator<Item=T>, Iterator<Item=U>",
+		"output-type": "Iterator<Item=(T, U)>",
+		"example": ""
+	},
+	{
+		"method": ".peekable()",
+		"description": "Wraps an iterator to allow peeking at the next element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Peekable<Iterator<Item=T>>",
+		"example": ""
+	},
+	{
+		"method": ".rev()",
+		"description": "Reverses the direction of iteration.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".cycle()",
+		"description": "Repeats the iterator indefinitely.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".skip()",
+		"description": "Skips the first n elements.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".skip_while()",
+		"description": "Skips elements as long as a predicate is true.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".take()",
+		"description": "Takes the first n elements.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".take_while()",
+		"description": "Takes elements as long as a predicate is true.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".find()",
+		"description": "Returns the first element that satisfies a predicate.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<T>",
+		"example": ""
+	},
+	{
+		"method": ".position()",
+		"description": "Returns the index of the first element that satisfies a predicate.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<usize>",
+		"example": ""
+	},
+	{
+		"method": ".rposition()",
+		"description": "Returns the index of the last element that satisfies a predicate.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<usize>",
+		"example": ""
+	},
+	{
+		"method": ".all()",
+		"description": "Returns true if all elements satisfy a predicate.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "bool",
+		"example": ""
+	},
+	{
+		"method": ".any()",
+		"description": "Returns true if any element satisfies a predicate.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "bool",
+		"example": ""
+	},
+	{
+		"method": ".none()",
+		"description": "Returns true if no elements satisfy a predicate.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "bool",
+		"example": ""
+	},
+	{
+		"method": ".count()",
+		"description": "Returns the number of elements.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "usize",
+		"example": "fn how_many_chickens() {\nlet coop = [true, false, false, true, true];\ncoop.iter()\n.filter(|x| x == true)\n.count();"
+	},
+	{
+		"method": ".last()",
+		"description": "Returns the last element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<T>",
+		"example": ""
+	},
+	{
+		"method": ".min()",
+		"description": "Returns the minimum element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<T>",
+		"example": ""
+	},
+	{
+		"method": ".max()",
+		"description": "Returns the maximum element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<T>",
+		"example": ""
+	},
+	{
+		"method": ".sum()",
+		"description": "Returns the sum of elements.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "T",
+		"example": ""
+	},
+	{
+		"method": ".product()",
+		"description": "Returns the product of elements.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "T",
+		"example": ""
+	},
+	{
+		"method": ".unzip()",
+		"description": "Unzips an iterator of pairs into two separate collections.",
+		"input-type": "Iterator<Item=(T, U)>",
+		"output-type": "Tuple<Vec<T>, Vec<U>>",
+		"example": ""
+	},
+	{
+		"method": ".unzip_n()",
+		"description": "Unzips an iterator of n-tuples into n separate collections.",
+		"input-type": "Iterator<Item=(T, U, V)>",
+		"output-type": "Tuple<Vec<T>, Vec<U>, Vec<V>>",
+		"example": ""
+	},
+	{
+		"method": ".advance_by()",
+		"description": "Advances the iterator by n elements.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Result<(), NonZero<usize>>",
+		"example": ""
+	},
+	{
+		"method": ".peek()",
+		"description": "Returns a reference to the next element without advancing the iterator.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<&T>",
+		"example": ""
+	},
+	{
+		"method": ".advance()",
+		"description": "Advances the iterator by one element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<T>",
+		"example": ""
+	},
+	{
+		"method": ".next()",
+		"description": "Returns the next element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<T>",
+		"example": ""
+	},
+	{
+		"method": ".next_back()",
+		"description": "Returns the next element from the back.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<T>",
+		"example": ""
+	},
+	{
+		"method": ".size_hint()",
+		"description": "Returns an estimate of the remaining elements.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Tuple<usize, Option<usize>>",
+		"example": ""
+	},
+	{
+		"method": ".is_empty()",
+		"description": "Returns true if the iterator is empty.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "bool",
+		"example": ""
+	},
+	{
+		"method": ".clone()",
+		"description": "Clones the iterator.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".clone_from()",
+		"description": "Clones the iterator into an existing one.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".as_slice()",
+		"description": "Converts the iterator into a slice.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<&[T]>",
+		"example": ""
+	},
+	{
+		"method": ".as_mut_slice()",
+		"description": "Converts the iterator into a mutable slice.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<&mut [T]>",
+		"example": ""
+	},
+	{
+		"method": ".as_mut()",
+		"description": "Converts the iterator into a mutable reference.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<&mut T>",
+		"example": ""
+	},
+	{
+		"method": ".as_ref()",
+		"description": "Converts the iterator into a reference.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<&T>",
+		"example": ""
+	},
+	{
+		"method": ".as_mut_ref()",
+		"description": "Converts the iterator into a mutable reference.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Option<&mut T>",
+		"example": ""
+	},
+	{
+		"method": ".into_iter()",
+		"description": "Consumes the iterator and creates an iterator that takes ownership of each element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".into_mut()",
+		"description": "Consumes the iterator and creates an iterator that takes mutable ownership of each element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".into()",
+		"description": "Consumes the iterator and creates an iterator that takes ownership of each element.",
+		"input-type": "Iterator<Item=T>",
+		"output-type": "Iterator<Item=T>",
+		"example": ""
+	},
+	{
+		"method": ".chars()",
+		"description": "",
+		"input-type": "",
+		"output-type": "",
+		"example": "fn char_on_new_line() {\nfor character in \"hello\".chars() {\nprintln!(\"{character}\");"
+	}
+]
